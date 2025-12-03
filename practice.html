@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Day 1 – Git Basics</title>
     <link rel="stylesheet" href="apperance.css">
 </head>
 <body>
@@ -13,19 +13,29 @@
 
         <h2>Topics Covered</h2>
         <ul>
-            <li>git init</li>
-            <li>git status</li>
-            <li>git add</li>
-            <li>git commit</li>
-            <li>git log</li>
-            <li>Writing good commit messages</li>
+            <li><strong>git init</strong> – start a new Git repository</li>
+            <li><strong>git status</strong> – check changes in your working directory</li>
+            <li><strong>git add</strong> – stage changes</li>
+            <li><strong>git commit</strong> – save snapshots of your project</li>
+            <li><strong>git log</strong> – view commit history</li>
+            <li><strong>Writing good commit messages</strong></li>
         </ul>
 
+        <h2>Why These Commands Matter</h2>
+        <p>These commands form the foundation of using Git. They help you track changes, organize your work, and save different versions of your project. Learning them is the first step toward collaborating on projects and working with remote repositories like GitHub.</p>
+
         <h2>Lab Activity</h2>
-        <p>Initialize a Git repository and make 3 meaningful commits.</p>
+        <p>Create a new folder, initialize a Git repository inside it, and make 3 meaningful commits:</p>
+        <ul>
+            <li>Commit 1: Add an HTML file</li>
+            <li>Commit 2: Add styling or another file</li>
+            <li>Commit 3: Edit your file and commit again</li>
+        </ul>
 
         <h2>Challenge</h2>
-        <p>Undo the last commit without losing your changes.</p>
+        <p>Undo the last commit without losing your changes using:</p>
+        <pre><code>git reset --soft HEAD~1</code></pre>
+        <p>This removes the commit but keeps all your changes in the staging area.</p>
 
         <h2>New Concepts Added</h2>
         <ul>
@@ -34,6 +44,9 @@
             <li><strong>git merge</strong> – combine branches</li>
             <li><strong>.gitignore</strong> – ignore unnecessary files</li>
         </ul>
+
+        <h2>Branching Example</h2>
+    
 
         <h2>Extra Notes</h2>
         <p>Branches help keep your work organized by allowing you to create separate lines of development. Merging lets you bring changes together when ready. Using <code>.gitignore</code> keeps your repository clean and prevents committing system files or secrets.</p>
@@ -44,35 +57,46 @@
             <h2>HELLO THIS IS FROM feature B</h2>
             
             <h3>To-do Form</h3>
+        <h2>Helpful Additional Commands</h2>
+        <ul>
+            <li><code>git diff</code> – see what changed before staging</li>
+            <li><code>git rm</code> – remove tracked files</li>
+            <li><code>git restore</code> – unstage or discard changes safely</li>
+            <li><code>git show</code> – inspect a specific commit in detail</li>
+        </ul>
 
-        </pre>
+        <h2>What I Learned Today</h2>
+        <p>Today I learned how Git tracks changes to files and helps create a history of everything I work on. I practiced setting up a repository, committing changes, and exploring my commit history. Understanding branching and merging also helped me see how larger projects stay organized and how developers experiment safely without affecting the main version of the project.</p>
+
+        <h2>This is from feature A</h2>
+        <h2>To-do Form</h2>
         <form style="max-width:400px; margin:auto;">
-    <label for="task">Task Title:</label><br>
-    <input type="text" id="task" name="task" placeholder="Enter task title" required><br><br>
+            <label for="task">Task Title:</label><br>
+            <input type="text" id="task" name="task" placeholder="Enter task title" required><br><br>
 
-    <label for="desc">Description:</label><br>
-    <textarea id="desc" name="desc" rows="3" placeholder="Short description"></textarea><br><br>
+            <label for="desc">Description:</label><br>
+            <textarea id="desc" name="desc" rows="3" placeholder="Short description"></textarea><br><br>
 
-    <label for="priority">Priority:</label><br>
-    <select id="priority" name="priority">
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-    </select><br><br>
+            <label for="priority">Priority:</label><br>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select><br><br>
 
-    <label for="deadline">Deadline:</label><br>
-    <input type="date" id="deadline" name="deadline"><br><br>
+            <label for="deadline">Deadline:</label><br>
+            <input type="date" id="deadline" name="deadline"><br><br>
 
-    <label for="category">Category:</label><br>
-    <select id="category" name="category">
-        <option value="study">Study</option>
-        <option value="work">Work</option>
-        <option value="personal">Personal</option>
-        <option value="other">Other</option>
-    </select><br><br>
+            <label for="category">Category:</label><br>
+            <select id="category" name="category">
+                <option value="study">Study</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select><br><br>
 
-    <button type="submit">Add Task</button>
-</form>
+            <button type="submit">Add Task</button>
+        </form>
     </div>
 
 </body>
